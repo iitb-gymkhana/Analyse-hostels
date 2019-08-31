@@ -38,7 +38,7 @@ func displayData(currentFloor int, m map[string]int) {
 }
 
 func main() {
-	FILE := "16a.csv"
+	FILE := os.Args[1]
 	STARTINGFLOOR := 1
 
 	fmt.Printf("-------- Analysing %s starting with floor %d -------- \n", FILE, STARTINGFLOOR)
