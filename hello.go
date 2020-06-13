@@ -26,7 +26,7 @@ func AddCount(rollNumber string, department string, m map[string]int) {
 func displayData(currentFloor int, m map[string]int) {
 	totalCount := 0
 	for department, numberOfStudents := range m {
-		if department == "-" {
+		if department == "- -" {
 			continue
 		}
 		fmt.Printf("[%s]: [%d] ", department, numberOfStudents)
@@ -55,7 +55,7 @@ func main() {
 
 		roomNo := record[2]
 		rollNumber := record[3]
-		department := record[6]
+		department := record[5] + " " + record[6]
 
 		val, _ := strconv.Atoi(roomNo)
 		if val/100 == currentFloor {
